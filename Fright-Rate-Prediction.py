@@ -119,7 +119,7 @@ hist_gradient_boost_model_300.fit(X_train, y_train)
 random_forest_model.fit(X_train, y_train)
 gradient_boost_model.fit(X_train, y_train)
 
-# --- 1. PREDICT ---
+# --- 1. Predictions ---
 hist_gradient_boost_preds = hist_gradient_boost_model_5.predict(X_test)
 hist_gradient_boost_preds_100 = hist_gradient_boost_model_100.predict(X_test)
 hist_gradient_boost_preds_300 = hist_gradient_boost_model_300.predict(X_test)
@@ -147,7 +147,6 @@ r2_score_hist_gradient_boost_300 = r2_score(y_test, hist_gradient_boost_preds_30
 r2_score_random_forest = r2_score(y_test, random_forest_preds)
 r2_score_gradient_boost = r2_score(y_test, gradient_boost_preds)
 
-# --- 5. PRINT ---
 print("=== HistGradientBoosting with 5 trees ===")
 print("RMSE:", rmse_hist_gradient_boost)
 print("MAE :", mae_hist_gradient_boost)
