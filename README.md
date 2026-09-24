@@ -1,4 +1,4 @@
-# Fright-Rate-Prediction-Challenge
+# Fright-Rate-Prediction Challenge
  ## Data Splitting Methodology
  
 To account for the specialized temporal and spatial nature of the datasets, the data splitting methodology avoids complete random splitting—which could disrupt critical data indications—and instead employs a temporal split that accounts for seasonality alongside spatial grouping based on latitude and longitude coordinates. Shuffling is strictly restricted within these spatial clusters to preserve geographic integrity, while monthly groupings are introduced to evaluate seasonality effects across different equipment types (Dry Van, Flatbed, and Reefer), each requiring tailored seasonal treatments due to their distinct cargo characteristics and operational timeframes.
