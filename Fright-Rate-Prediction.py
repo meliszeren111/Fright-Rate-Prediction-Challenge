@@ -191,13 +191,7 @@ val_predictions_df = val_template.select("load_id").join(
 
 val_predictions_df.write_csv("data/validation-predictions-template.csv")
 
-
-import polars as pl
-
-# 1. Aralık verisini okuma
 dec_df = pl.read_csv("data/december-chart-inputs.csv")
-
-# 2. Mevcut categorical sütunları dönüştürme ve 'month' ekleme
 dec_df = dec_df.with_columns(
     pl.lit(12).alias("month"), # Aralık ayı için month=12
     pl.col("pickup").cast(pl.Categorical).to_physical().alias("pickup_encoded"),
@@ -205,7 +199,6 @@ dec_df = dec_df.with_columns(
     pl.col("equipment").cast(pl.Categorical).to_physical().alias("equipment_encoded"),
 )
 
-# 3. Modelin beklediği 12 sütunu hazırlama (Eksik koordinat ve indeksler varsayılan/ortalama atanır)
 selected_features = [
     'pickup_lat', 'pickup_lon', 'delivery_lat', 'delivery_lon',
     'distance', 'weight', 'market_index', 'quote_signal',
