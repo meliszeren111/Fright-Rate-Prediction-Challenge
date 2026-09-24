@@ -193,7 +193,7 @@ val_predictions_df.write_csv("data/validation-predictions-template.csv")
 
 dec_df = pl.read_csv("data/december-chart-inputs.csv")
 dec_df = dec_df.with_columns(
-    pl.lit(12).alias("month"), # Aralık ayı için month=12
+    pl.lit(12).alias("month"), # December month=12
     pl.col("pickup").cast(pl.Categorical).to_physical().alias("pickup_encoded"),
     pl.col("delivery").cast(pl.Categorical).to_physical().alias("delivery_encoded"),
     pl.col("equipment").cast(pl.Categorical).to_physical().alias("equipment_encoded"),
