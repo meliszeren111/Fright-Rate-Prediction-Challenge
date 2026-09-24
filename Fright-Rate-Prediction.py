@@ -147,19 +147,19 @@ r2_score_hist_gradient_boost_300 = r2_score(y_test, hist_gradient_boost_preds_30
 r2_score_random_forest = r2_score(y_test, random_forest_preds)
 r2_score_gradient_boost = r2_score(y_test, gradient_boost_preds)
 
-print("=== HistGradientBoosting with 5 trees ===")
+print("=== HistGradientBoosting with 5 iterations ===")
 print("RMSE:", rmse_hist_gradient_boost)
 print("MAE :", mae_hist_gradient_boost)
 print("R2  :", r2_score_hist_gradient_boost)
 print()
 
-print("=== HistGradientBoosting with 100 trees ===")
+print("=== HistGradientBoosting with 100 iterations ===")
 print("RMSE:", rmse_hist_gradient_boost_100)
 print("MAE :", mae_hist_gradient_boost_100)
 print("R2  :", r2_score_hist_gradient_boost_100)
 print()
 
-print("=== HistGradientBoosting with 300 trees ===")
+print("=== HistGradientBoosting with 300 iterations ===")
 print("RMSE:", rmse_hist_gradient_boost_300)
 print("MAE :", mae_hist_gradient_boost_300)
 print("R2  :", r2_score_hist_gradient_boost_300)
